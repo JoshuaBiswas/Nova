@@ -1,4 +1,4 @@
-import 'package:alpha/screens/campaigns/campaignTabs/tag.dart';
+import 'package:alpha/shared/tagChip.dart';
 import 'package:flutter/material.dart';
 
 class TagScrollBar extends StatelessWidget {
@@ -6,30 +6,21 @@ class TagScrollBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      scrollDirection: Axis.horizontal,
-      children: [
-        Container(
-          height: 50,
-          width: 100,
-          child: Padding(padding: EdgeInsets.all(5.0), child: Tag()),
-        ),
-        Container(
-          height: 50,
-          width: 100,
-          child: Padding(padding: EdgeInsets.all(5.0), child: Tag()),
-        ),
-        Container(
-          height: 50,
-          width: 100,
-          child: Padding(padding: EdgeInsets.all(5.0), child: Tag()),
-        ),
-        Container(
-          height: 50,
-          width: 100,
-          child: Padding(padding: EdgeInsets.all(5.0), child: Tag()),
-        ),
-      ],
-    );
+    return SizedBox(
+        height: 40,
+        child: ListView(scrollDirection: Axis.horizontal, children: [
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 5.0,
+            ),
+            child: TagChip(text: "Tech"),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              right: 5.0,
+            ),
+            child: TagChip(text: "Innovation"),
+          ),
+        ]));
   }
 }

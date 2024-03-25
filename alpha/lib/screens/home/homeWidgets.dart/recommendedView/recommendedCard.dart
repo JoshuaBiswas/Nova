@@ -1,3 +1,5 @@
+import 'package:alpha/screens/home/homeWidgets.dart/recommendedView/learnMoreButton.dart';
+import 'package:alpha/shared/tagChip.dart';
 import 'package:flutter/material.dart';
 
 class RecommendedCard extends StatelessWidget {
@@ -41,7 +43,9 @@ class RecommendedCard extends StatelessWidget {
                       )),
                 ),
               ),
+              //spacing for image
               Flexible(flex: 3, fit: FlexFit.tight, child: Container()),
+              //description
               Flexible(
                   flex: 2,
                   fit: FlexFit.tight,
@@ -52,6 +56,7 @@ class RecommendedCard extends StatelessWidget {
                         child: Text(
                             "Step into a technological paradise, unveiling the latest advancements, trends, and marvels in the world of science and technology.")),
                   )),
+              //deadline text
               Flexible(
                   flex: 1,
                   fit: FlexFit.tight,
@@ -63,6 +68,7 @@ class RecommendedCard extends StatelessWidget {
                             style: TextStyle(fontSize: 20),
                             "Deadline: Feb 28")),
                   )),
+              //buttons
               Flexible(
                 flex: 3,
                 fit: FlexFit.tight,
@@ -75,25 +81,31 @@ class RecommendedCard extends StatelessWidget {
                       ), // Adjust the radius as needed
                     ),
                     child: Column(children: [
-                      Flexible(
-                        fit: FlexFit.tight,
-                        child: Row(children: [
-                          Padding(
-                            padding: EdgeInsets.all(5.0),
-                            child: Container(
-                                color: Colors.grey, child: Text("Tech")),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(5.0),
-                            child: Container(
-                                color: Colors.grey, child: Text("Innovation")),
-                          )
-                        ]),
-                      ),
+                      //tags
+                      SizedBox(
+                          height: 40,
+                          child: ListView(
+                              scrollDirection: Axis.horizontal,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 5.0,
+                                  ),
+                                  child: TagChip(text: "Tech"),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    right: 5.0,
+                                  ),
+                                  child: TagChip(text: "Innovation"),
+                                ),
+                              ])),
+                      //Big Learn More button
                       Flexible(
                           fit: FlexFit.tight,
-                          child: Container(
-                              color: Colors.grey, child: Text("Learn More")))
+                          child: Padding(
+                              padding: EdgeInsets.all(15.0),
+                              child: LearnMore())),
                     ])),
               )
             ],

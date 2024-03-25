@@ -6,45 +6,47 @@ class RecommendedView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final PageController controller =
-        PageController(initialPage: 0, viewportFraction: 0.9);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.all(10.0),
-          child: Text("Recommended Campaigns",
+          padding: EdgeInsets.only(left: 10.0),
+          child: Text("Recommended for you",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 20.0,
+                  fontSize: 25.0,
+                  color: Colors.white)),
+        ),
+        Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Text(
+              "Since you succeeded with the Microsoft Hololens campaign:",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17.0,
                   color: Colors.white)),
         ),
         SizedBox(
-          height: 500,
-          child: PageView(
-            controller: controller,
-            children: [
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 8.0),
-                child: Center(
-                  child: RecommendedCard(),
-                ),
+            height: 500,
+            child: Container(
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10.0),
+                      child: RecommendedCard()),
+                  Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10.0),
+                      child: RecommendedCard()),
+                  Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10.0),
+                      child: RecommendedCard()),
+                  Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10.0),
+                      child: RecommendedCard()),
+                ],
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 8.0),
-                child: Center(
-                  child: RecommendedCard(),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 8.0),
-                child: Center(
-                  child: RecommendedCard(),
-                ),
-              ),
-            ],
-          ),
-        )
+            ))
       ],
     );
   }

@@ -35,17 +35,23 @@ class _NavigationState extends State<Navigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 50, 50, 50),
+      backgroundColor: Color.fromARGB(255, 47, 47, 47),
       appBar: AppBar(
-        title: Text("Welcome to Nova",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0)),
+        toolbarHeight: 100,
+        title: Text("Nova",
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 40.0,
+                color: Colors.white)),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
+          IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.notifications, size: 40, color: Colors.white))
         ],
-        backgroundColor: Colors.blueGrey.shade500,
+        backgroundColor: Color.fromARGB(255, 47, 47, 47),
       ),
       bottomNavigationBar: NavigationBar(
-        backgroundColor: Colors.blueGrey.shade500,
+        backgroundColor: Color.fromARGB(255, 179, 179, 179),
         onDestinationSelected: (int index) {
           setState(() {
             currentPageIndex = index;

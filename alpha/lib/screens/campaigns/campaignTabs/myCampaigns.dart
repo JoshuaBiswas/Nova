@@ -24,57 +24,87 @@ class MyCampaigns extends StatelessWidget {
             Flexible(
                 child: TabBarView(
               children: [
-                ListView(children: [
-                  Center(
-                      child: Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: EnrolledCard(),
-                  )),
-                  Center(
-                      child: Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: EnrolledCard(),
-                  )),
-                  Center(
-                      child: Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: EnrolledCard(),
-                  )),
-                ]),
-                ListView(children: [
-                  Center(
-                      child: Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: EnrolledCard(),
-                  )),
-                  Center(
-                      child: Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: EnrolledCard(),
-                  )),
-                  Center(
-                      child: Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: EnrolledCard(),
-                  )),
-                ]),
-                ListView(children: [
-                  Center(
-                      child: Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: EnrolledCard(),
-                  )),
-                  Center(
-                      child: Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: EnrolledCard(),
-                  )),
-                  Center(
-                      child: Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: EnrolledCard(),
-                  )),
-                ]),
+                Center(
+                  child: SingleChildScrollView(
+                    padding: EdgeInsets.only(top: 10.0),
+                    child: Wrap(
+                        direction: Axis.horizontal,
+                        alignment: WrapAlignment.start,
+                        spacing: 20.0,
+                        runSpacing: 20.0,
+                        children: [
+                          SizedBox(
+                            height: 300,
+                            width: 300,
+                            child: EnrolledCard(),
+                          ),
+                          SizedBox(
+                            height: 300,
+                            width: 300,
+                            child: EnrolledCard(),
+                          ),
+                          SizedBox(
+                            height: 300,
+                            width: 300,
+                            child: EnrolledCard(),
+                          )
+                        ]),
+                  ),
+                ),
+                Center(
+                  child: SingleChildScrollView(
+                    padding: EdgeInsets.only(top: 10.0),
+                    child: Wrap(
+                        direction: Axis.horizontal,
+                        alignment: WrapAlignment.start,
+                        spacing: 20.0,
+                        runSpacing: 20.0,
+                        children: [
+                          SizedBox(
+                            height: 300,
+                            width: 300,
+                            child: EnrolledCard(),
+                          ),
+                          SizedBox(
+                            height: 300,
+                            width: 300,
+                            child: EnrolledCard(),
+                          ),
+                          SizedBox(
+                            height: 300,
+                            width: 300,
+                            child: EnrolledCard(),
+                          )
+                        ]),
+                  ),
+                ),
+                Center(
+                  child: SingleChildScrollView(
+                    padding: EdgeInsets.only(top: 10.0),
+                    child: Wrap(
+                        direction: Axis.horizontal,
+                        alignment: WrapAlignment.start,
+                        spacing: 20.0,
+                        runSpacing: 20.0,
+                        children: [
+                          SizedBox(
+                            height: 300,
+                            width: 300,
+                            child: EnrolledCard(),
+                          ),
+                          SizedBox(
+                            height: 300,
+                            width: 300,
+                            child: EnrolledCard(),
+                          ),
+                          SizedBox(
+                            height: 300,
+                            width: 300,
+                            child: EnrolledCard(),
+                          )
+                        ]),
+                  ),
+                ),
               ],
             ))
           ],

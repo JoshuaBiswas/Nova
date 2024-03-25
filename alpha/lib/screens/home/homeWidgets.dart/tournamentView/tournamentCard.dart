@@ -1,3 +1,4 @@
+import 'package:alpha/screens/home/homeWidgets.dart/tournamentView/countMeInButton.dart';
 import 'package:flutter/material.dart';
 
 class TournamentCard extends StatelessWidget {
@@ -76,24 +77,11 @@ class TournamentCard extends StatelessWidget {
                     ),
                     child: Column(children: [
                       Flexible(
-                        fit: FlexFit.tight,
-                        child: Row(children: [
-                          Padding(
-                            padding: EdgeInsets.all(5.0),
-                            child: Container(
-                                color: Colors.grey, child: Text("Tech")),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(5.0),
-                            child: Container(
-                                color: Colors.grey, child: Text("Innovation")),
-                          )
-                        ]),
-                      ),
+                          fit: FlexFit.tight,
+                          child: Container(child: CountMeInButton())),
                       Flexible(
                           fit: FlexFit.tight,
-                          child: Container(
-                              color: Colors.grey, child: Text("Learn More")))
+                          child: Container(child: Text("Learn More"))),
                     ])),
               )
             ],

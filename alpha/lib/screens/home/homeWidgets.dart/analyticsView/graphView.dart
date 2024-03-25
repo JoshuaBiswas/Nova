@@ -1,4 +1,3 @@
-import 'package:alpha/screenSize.dart';
 import 'package:alpha/screens/home/homeWidgets.dart/analyticsView/moneyGraph.dart';
 import 'package:flutter/material.dart';
 
@@ -7,64 +6,100 @@ class GraphView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(
-          height: ScreenSize.screenWidth * 0.15,
-          child: Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Text("Analytics",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.0,
-                    color: Colors.white)),
-          ),
-        ),
-        Center(
-            child: SizedBox(
-                height: ScreenSize.screenWidth * 0.85,
-                width: ScreenSize.screenWidth * 0.85,
-                child: Container(
-                  child: DefaultTabController(
-                      length: 4,
-                      child: Column(
-                        children: [
-                          Flexible(
-                              flex: 1,
-                              child: Container(
-                                child: TabBar(tabs: [
-                                  Tab(
-                                    child: Container(color: Colors.white),
-                                  ),
-                                  Tab(
-                                    child: Container(color: Colors.white),
-                                  ),
-                                  Tab(
-                                    child: Container(color: Colors.white),
-                                  ),
-                                  Tab(
-                                    child: Container(color: Colors.white),
-                                  ),
-                                ]),
-                              )),
-                          Flexible(
-                              flex: 7,
-                              child: Container(
-                                color: Colors.white,
-                                child: TabBarView(
-                                  children: [
-                                    MoneyGraph(),
-                                    MoneyGraph(),
-                                    MoneyGraph(),
-                                    MoneyGraph(),
-                                  ],
-                                ),
-                              )),
-                        ],
-                      )),
-                )))
-      ],
+    return SizedBox(
+      height: 400,
+      child: DefaultTabController(
+          length: 4,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Flexible(
+                  flex: 1,
+                  child: Container(
+                    child: TabBar(
+                        labelPadding: EdgeInsets.zero,
+                        tabAlignment: TabAlignment.fill,
+                        tabs: [
+                          Tab(
+                              child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: FractionallySizedBox(
+                                    widthFactor: 0.85,
+                                    child: Container(
+                                      child: Center(child: Icon(Icons.tiktok)),
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(5.0),
+                                              topRight: Radius.circular(5.0))),
+                                      width: 100,
+                                    ),
+                                  ))),
+                          Tab(
+                              child: Align(
+                                  alignment: Alignment(-0.33, 0.0),
+                                  child: FractionallySizedBox(
+                                    widthFactor: 0.85,
+                                    child: Container(
+                                      child:
+                                          Center(child: Icon(Icons.facebook)),
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(5.0),
+                                              topRight: Radius.circular(5.0))),
+                                      width: 100,
+                                    ),
+                                  ))),
+                          Tab(
+                              child: Align(
+                                  alignment: Alignment(0.33, 0.0),
+                                  child: FractionallySizedBox(
+                                    widthFactor: 0.85,
+                                    child: Container(
+                                      child: Center(child: Icon(Icons.shield)),
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(5.0),
+                                              topRight: Radius.circular(5.0))),
+                                      width: 100,
+                                    ),
+                                  ))),
+                          Tab(
+                              child: Align(
+                                  alignment: Alignment.centerRight,
+                                  child: FractionallySizedBox(
+                                    widthFactor: 0.85,
+                                    child: Container(
+                                      child: Center(
+                                          child:
+                                              Icon(Icons.video_library_sharp)),
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(5.0),
+                                              topRight: Radius.circular(5.0))),
+                                      width: 100,
+                                    ),
+                                  ))),
+                        ]),
+                  )),
+              Flexible(
+                  flex: 4,
+                  child: Container(
+                    color: Colors.white,
+                    child: TabBarView(
+                      children: [
+                        MoneyGraph(),
+                        MoneyGraph(),
+                        MoneyGraph(),
+                        MoneyGraph(),
+                      ],
+                    ),
+                  )),
+            ],
+          )),
     );
   }
 }

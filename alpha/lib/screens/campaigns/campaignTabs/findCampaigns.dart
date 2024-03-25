@@ -15,26 +15,33 @@ class FindCampaigns extends StatelessWidget {
         ),
         Divider(),
         Flexible(
-            flex: 10,
-            child: ListView(
-              children: [
-                Center(
-                    child: Padding(
-                  padding: EdgeInsets.all(30.0),
-                  child: RecommendedCard(),
-                )),
-                Center(
-                    child: Padding(
-                  padding: EdgeInsets.all(30.0),
-                  child: RecommendedCard(),
-                )),
-                Center(
-                    child: Padding(
-                  padding: EdgeInsets.all(30.0),
-                  child: RecommendedCard(),
-                )),
-              ],
-            )),
+          flex: 10,
+          child: SingleChildScrollView(
+            padding: EdgeInsets.only(top: 10.0),
+            child: Wrap(
+                direction: Axis.horizontal,
+                alignment: WrapAlignment.start,
+                spacing: 20.0,
+                runSpacing: 20.0,
+                children: [
+                  SizedBox(
+                    height: 500,
+                    width: 300,
+                    child: RecommendedCard(),
+                  ),
+                  SizedBox(
+                    height: 500,
+                    width: 300,
+                    child: RecommendedCard(),
+                  ),
+                  SizedBox(
+                    height: 500,
+                    width: 300,
+                    child: RecommendedCard(),
+                  )
+                ]),
+          ),
+        ),
       ],
     );
   }
