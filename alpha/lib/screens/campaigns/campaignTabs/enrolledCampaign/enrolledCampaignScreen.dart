@@ -1,3 +1,5 @@
+import 'package:alpha/screens/campaigns/campaignTabs/enrolledCampaign/campaignTabWidgets/CampaignMaterials.dart';
+import 'package:alpha/screens/campaigns/campaignTabs/enrolledCampaign/campaignTabWidgets/Contract.dart';
 import 'package:alpha/screens/campaigns/campaignTabs/enrolledCampaign/campaignTabWidgets/Instructions.dart';
 import 'package:alpha/screens/campaigns/campaignTabs/enrolledCampaign/statusBar.dart';
 import 'package:alpha/screens/profile/profileScreenWidgets/pfp.dart';
@@ -13,7 +15,7 @@ class EnrolledCampaignScreen extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 47, 47, 47),
         appBar: AppBar(
           toolbarHeight: 100,
-          title: Text("Green Horizon",
+          title: Text("Flavor Fiesta",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 25.0,
@@ -40,11 +42,11 @@ class EnrolledCampaignScreen extends StatelessWidget {
                     alignment: Alignment(-0.6, 0.67),
                     height: 150,
                     width: 100,
-                    child: Pfp(),
+                    child: Pfp(imageURL: "fiesta.png"),
                   ),
                 ],
               )),
-          Text("Green Horizon",
+          Text("Flavor Fiesta",
               style: TextStyle(color: Colors.white, fontSize: 20.0)),
           Text(
             "Green Co",
@@ -71,29 +73,36 @@ class EnrolledCampaignScreen extends StatelessWidget {
               length: 3,
               child: Column(
                 children: [
-                  TabBar(tabs: [
-                    Tab(
-                      child: Text("Campaign"),
-                    ),
-                    Tab(
-                      child: Text("Examples"),
-                    ),
-                    Tab(
-                      child: Text("Tips"),
-                    ),
-                  ]),
+                  TabBar(
+                      labelColor: Colors.white,
+                      unselectedLabelColor: Colors.white,
+                      tabs: [
+                        Tab(
+                          child: Text("Campaign"),
+                        ),
+                        Tab(
+                          child: Text("Examples"),
+                        ),
+                        Tab(
+                          child: Text("Tips"),
+                        ),
+                      ]),
                   SizedBox(
                       height: 300,
                       child: TabBarView(children: [
                         Center(
+                            child: SingleChildScrollView(
                           child: Column(
                             children: [
                               Container(height: 20),
                               Instructions(),
                               Container(height: 20),
+                              CampaignMaterials(),
+                              Container(height: 20),
+                              Contract(),
                             ],
                           ),
-                        ),
+                        )),
                         Placeholder(),
                         Placeholder(),
                       ]))

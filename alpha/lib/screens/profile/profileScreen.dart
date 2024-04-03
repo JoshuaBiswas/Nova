@@ -28,7 +28,7 @@ class ProfileScreen extends StatelessWidget {
                 alignment: Alignment(-0.6, 0.67),
                 height: 150,
                 width: 100,
-                child: Pfp(),
+                child: Pfp(imageURL: "profile.png"),
               ),
             ],
           )),

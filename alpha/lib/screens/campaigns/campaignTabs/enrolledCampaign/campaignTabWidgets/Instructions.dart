@@ -8,20 +8,29 @@ class Instructions extends StatelessWidget {
     return SizedBox(
         height: 200,
         child: Container(
-            color: Colors.white,
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(5.0)),
             child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Instructions"),
+                    Padding(
+                      padding: EdgeInsets.all(5.0),
+                      child: Text("Instructions"),
+                    ),
                     Icon(Icons.list),
                   ],
                 ),
-                Text(
-                    "One of the biggest values of the team is to improve Overwatch's individual and team focused gameplay to meet the needs of our core audience. When I look at the future of Overwatch, a year or two out, I don't see the exact same game that we're playing now, but with a few more heroes and maps added to it."),
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                      "One of the biggest values of the team is to improve Overwatch's individual and team focused gameplay to meet the needs of our core audience. When I look at the future of Overwatch, a year or two out, I don't see the exact same game that we're playing now, but with a few more heroes and maps added to it."),
+                ),
                 Container(
-                    color: Colors.grey,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5.0),
+                        color: Colors.grey),
                     height: 20,
                     width: 150,
                     child: Text("... MORE DETAILS")),

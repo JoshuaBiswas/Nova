@@ -23,6 +23,13 @@ class VideoScreen extends StatelessWidget {
             style: TextStyle(color: Colors.white),
             "Unlock the secrets of effective persuasion as we delve into proven techniques and strategies."),
         Container(height: 20),
+        SizedBox(
+            height: 220,
+            width: 350,
+            child: Container(
+                color: Colors.black,
+                child: Icon(Icons.play_arrow, color: Colors.grey, size: 50))),
+        Container(height: 20),
         Expanded(
             child: ListView(
           children: [

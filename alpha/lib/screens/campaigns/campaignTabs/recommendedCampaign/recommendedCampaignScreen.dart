@@ -35,7 +35,7 @@ class RecommendedCampaignScreen extends StatelessWidget {
           Container(height: 20),
           Text("Open", style: TextStyle(color: Colors.grey, fontSize: 20)),
           Text("27 of 100 slots remaining"),
-          PercentBar(percent: 27),
+          PercentBar(percent: 73),
           Container(height: 20),
           Text("Deadline: Feb 28"),
           Row(

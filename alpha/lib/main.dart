@@ -1,4 +1,3 @@
-import 'package:alpha/screenSize.dart';
 import 'package:alpha/screens/home/homeScreen.dart';
 import 'package:alpha/screens/learn/learnScreen.dart';
 import 'package:alpha/screens/profile/profileScreen.dart';
@@ -14,7 +13,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenSize.updateScreenSize(context);
     return MaterialApp(
       theme: ThemeData(useMaterial3: true),
       home: const SafeArea(child: Navigation()),

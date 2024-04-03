@@ -9,7 +9,15 @@ class FindCampaigns extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Flexible(child: TextField()),
+        Container(
+          height: 20,
+        ),
+        Flexible(
+            child: Container(
+                color: Colors.white,
+                child: TextField(
+                    decoration: InputDecoration(hintText: "Search")))),
+        Container(height: 20),
         Flexible(
           child: TagScrollBar(),
         ),

@@ -10,17 +10,20 @@ class MyCampaigns extends StatelessWidget {
         length: 3,
         child: Column(
           children: [
-            TabBar(tabs: [
-              Tab(
-                child: Text("Active"),
-              ),
-              Tab(
-                child: Text("Completed"),
-              ),
-              Tab(
-                child: Text("Other"),
-              ),
-            ]),
+            TabBar(
+                labelColor: Colors.white,
+                unselectedLabelColor: Colors.white,
+                tabs: [
+                  Tab(
+                    child: Text("Active"),
+                  ),
+                  Tab(
+                    child: Text("Completed"),
+                  ),
+                  Tab(
+                    child: Text("Other"),
+                  ),
+                ]),
             Flexible(
                 child: TabBarView(
               children: [

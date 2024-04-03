@@ -20,14 +20,17 @@ class SearchScreen extends StatelessWidget {
         length: 2,
         child: Column(
           children: [
-            TabBar(tabs: [
-              Tab(
-                child: Text("My Campaigns"),
-              ),
-              Tab(
-                child: Text("Find Campaigns"),
-              ),
-            ]),
+            TabBar(
+                labelColor: Colors.white,
+                unselectedLabelColor: Colors.white,
+                tabs: [
+                  Tab(
+                    child: Text("My Campaigns"),
+                  ),
+                  Tab(
+                    child: Text("Find Campaigns"),
+                  ),
+                ]),
             Flexible(
                 child: TabBarView(
                     physics: NeverScrollableScrollPhysics(),

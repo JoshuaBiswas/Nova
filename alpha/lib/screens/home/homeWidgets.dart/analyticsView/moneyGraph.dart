@@ -42,7 +42,7 @@ class MoneyGraph extends StatelessWidget {
                 child: DropdownMenu(
                   expandedInsets: EdgeInsets.zero,
                   dropdownMenuEntries: [
-                    DropdownMenuEntry(value: 42, label: "Cat")
+                    DropdownMenuEntry(value: 42, label: "FOLLOWER")
                   ],
                 )),
           ),
@@ -53,7 +53,7 @@ class MoneyGraph extends StatelessWidget {
                 child: DropdownMenu(
                   expandedInsets: EdgeInsets.zero,
                   dropdownMenuEntries: [
-                    DropdownMenuEntry(value: 42, label: "Cat")
+                    DropdownMenuEntry(value: 42, label: "PAST WEEK")
                   ],
                 )),
           ),

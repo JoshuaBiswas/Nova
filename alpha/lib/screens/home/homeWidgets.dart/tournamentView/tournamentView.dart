@@ -1,4 +1,3 @@
-import 'package:alpha/screenSize.dart';
 import 'package:alpha/screens/home/homeWidgets.dart/tournamentView/tournamentCard.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +10,7 @@ class TournamementView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          height: ScreenSize.screenWidth * 0.15,
+          height: 60,
           child: Padding(
             padding: EdgeInsets.all(10.0),
             child: Text("Get competitive",
@@ -22,13 +21,13 @@ class TournamementView extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: ScreenSize.screenWidth * 0.3,
+          height: 60,
           child: Text(
               style: TextStyle(color: Colors.white),
               "It’s time to show the world what you’re made of. Go head-to-head with other Nova Creatives to test your mettle."),
         ),
         SizedBox(
-          height: ScreenSize.screenWidth * 1.25,
+          height: 500,
           child: Center(
             child: TournamentCard(),
           ),
